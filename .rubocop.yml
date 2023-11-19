@@ -1,0 +1,11 @@
+require: rubocop-performance
+
+# 基本設定
+AllCops:
+  TargetRubyVersion: 3.1
+  NewCops: enable
+  Exclude:
+    - "db/schema.rb"
+    - "bin/*"
+    - "config/**/*"
+    - "node_modules/**/*"
