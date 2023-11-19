@@ -1,24 +1,28 @@
-# README
+# プロジェクト名
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 概要
 
-Things you may want to cover:
+ここにプロジェクトの簡単な説明を書きます。
 
-* Ruby version
+## 環境構築手順
 
-* System dependencies
+このプロジェクトはDockerを使用しており、開発環境の構築は以下の手順で行います。
 
-* Configuration
+### 環境構築
 
-* Database creation
+1. Dockerビルド
+```sh
+docker compose build
+```
 
-* Database initialization
+2. コンテナー起動
+```sh
+docker compose up
+```
 
-* How to run the test suite
+3. ridgepole実行（DB）
+```sh
+docker-compose exec web bundle exec ridgepole --config ./config/database.yml --file ./db/Schemafile --apply
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+4. localhost:3000接続で最終確認
