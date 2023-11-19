@@ -9,3 +9,6 @@ AllCops:
     - "bin/*"
     - "config/**/*"
     - "node_modules/**/*"
+
+Documentation:
+  Enabled: false
