@@ -13,6 +13,7 @@
 ActiveRecord::Schema[7.0].define(version: 2023_11_19_160427) do
   create_table "stores", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
+    t.string "address"
   end
 
 end

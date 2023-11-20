@@ -2,7 +2,10 @@
 
 ## 概要
 
-ここにプロジェクトの簡単な説明を書きます。
+### バージョン情報
+- ruby : 3.1.4
+- Rails: 7.0.8
+- MySQL: 8.0.33
 
 ## 環境構築手順
 
@@ -22,7 +25,18 @@ docker compose up
 
 3. ridgepole実行（DB）
 ```sh
-docker-compose exec web bundle exec ridgepole --config ./config/database.yml --file ./db/Schemafile --apply
+docker compose exec web bundle exec ridgepole --config ./config/database.yml --file ./db/Schemafile --apply
 ```
 
 4. localhost:3000接続で最終確認
+
+## コマンド
+- ridgepole実行
+```sh
+docker compose exec web bundle exec ridgepole --config ./config/database.yml --file ./db/Schemafile --apply
+```
+
+- Railsコンテナーに接続
+```sh
+docker compose exec -it web bash
+```
