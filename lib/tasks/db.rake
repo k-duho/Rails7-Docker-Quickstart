@@ -5,9 +5,6 @@ namespace :db do
   task :exists do
     return unless Rails.env.development?
 
-    Rake::Task['db:load_config'].invoke
-    ActiveRecord::Base.configurations[Rails.env]
-
     begin
       ActiveRecord::Base.establish_connection
       ActiveRecord::Base.connection
